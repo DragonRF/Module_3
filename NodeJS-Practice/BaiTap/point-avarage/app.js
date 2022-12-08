@@ -43,14 +43,14 @@ let student = [
 ];
 
     let male = [];
-    let avg = 0;
+    let avgm = 0;
     for (let i = 0; i < student.length; i++) {
         if (student[i].gender === 'male') {
-                avg += student[i].poin
+                avgm += student[i].poin
             male.push(i);
         }
             }
-    let maleAVG = avg / male.length;
+    let maleAVG = avgm / male.length;
     console.log('Diem trung binh cong cua cac hoc sinh nam: ' + maleAVG)
 
 let female = [];
