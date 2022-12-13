@@ -1,6 +1,6 @@
 async function getDivision(a,b){
-    if (b !== 0)
-        return(a/b);
+    if (a > b)
+        return(a + ' la so lon nhat');
     return new Error('Math Error')
 }
 
@@ -18,8 +18,8 @@ f();
 const promise = (a, b)=> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (b !== 0) {
-                resolve(a / b);
+            if (a > b) {
+                resolve(a + ' la so lon nhat');
             } else {
                 reject(new Error("Math error"));
             }
