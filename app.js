@@ -1,7 +1,11 @@
-Promise.resolve('Success!')
-    .then(data => {
-       return data.toUpperCase()
-    })
-    .then(data => {
-        console.log(data)
-    })
+try {
+    try {
+        throw new Error('oops');
+    } catch (ex) {
+        console.error('inner', ex.message);
+    } finally {
+        console.log('finally');
+    }
+} catch (ex) {
+    console.error('outer', ex.message);
+}
