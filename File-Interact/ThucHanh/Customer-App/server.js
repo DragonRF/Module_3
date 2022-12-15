@@ -16,7 +16,7 @@ let server = http.createServer(function (req, res) {
         });
     });
 
-    fs.readFile('./templates/index.html','utf8', function(err, data) {
+    fs.readFile('./views/index.html','utf8', function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         data = data.replace('{list-user}', html)
         res.write(data)

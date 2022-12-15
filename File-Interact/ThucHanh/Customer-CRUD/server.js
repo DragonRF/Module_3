@@ -7,7 +7,7 @@ let server = http.createServer(function (req, res) {
     let methodRequest = req.method;
 
     if (methodRequest === 'GET') {
-        fs.readFile('./templates/create.html','utf8', (err, data) => {
+        fs.readFile('./views/create.html','utf8', (err, data) => {
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             return res.end()
