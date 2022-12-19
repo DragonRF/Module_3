@@ -16,7 +16,7 @@ let server = http.createServer(function (req, res) {
             str += `<td><button class="btn btn-danger" id="deleteProduct" onclick="deleteProduct(` + i + `)">Delete</button></td>`
             str += `<td><button class="btn btn-primary" id="updateProduct" onclick="updateProduct(` + i + `)">Update</button></td>`
             str += '</tr>';
-        };
+        }
         let html = fs.readFileSync('./templates/Product.html','utf8')
         res.writeHead(200, {'Content-Type': 'text/html'});
         html = html.replace('{list-product}', str)
